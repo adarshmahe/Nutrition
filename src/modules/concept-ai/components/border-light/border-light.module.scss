@@ -1,0 +1,48 @@
+.lightBorderContainer {
+  width: 800px;
+  position: relative;
+  margin-top: -2px;
+  margin-left: -2px;
+  &.print {
+    width: calc(100% + 4px);
+  }
+
+  .borderSvg {
+    position: absolute;
+  }
+
+  .borderSvg1 {
+    left: -2px;
+    top: -2px;
+  }
+
+  .borderSvg3 {
+    right: -4px;
+    bottom: -2px;
+  }
+  .borderImg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+  }
+  .borderImg1 {
+    width: 140px;
+    height: 140px;
+    left: -2px;
+    top: -2px;
+    background-image: url('../../../../assets/images/concept-ai/corner-top.png');
+  }
+  .borderImg3 {
+    width: 200px;
+    height: 200px;
+    right: -4px;
+    bottom: -2px;
+    background-image: url('../../../../assets/images/concept-ai/corner-bottom.png');
+    background-position: 100% 100%;
+  }
+
+  .borderBoxContent {
+    position: relative;
+    z-index: 1;
+  }
+}

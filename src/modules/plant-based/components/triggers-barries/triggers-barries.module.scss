@@ -1,0 +1,329 @@
+@import '../common.scss';
+
+.subTitle1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.desc1 {
+  font-size: 14px;
+  color: rgba(255,255,255, 0.8);
+  line-height: 1.4;
+}
+
+.desc2 {
+  font-size: 14px;
+  color: rgba(255,255,255, 1);
+  line-height: 1.4;
+}
+
+
+.imgContentBox {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 312px;
+
+  .detailBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 18px 23px;
+    top: -100%;
+    left: 0;
+    transition: top ease-in-out 0.2s;
+
+    font-size: 14px;
+    line-height: 1.3;
+    .label {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .val {
+      color: rgba(255,255,255, 0.6);
+      margin-bottom: 10px;
+    }
+  }
+
+  .detailBox2 {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .desc {
+      font-size: 16px;
+      color: rgba(255,255,255, 0.8);
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btnBox {
+      font-size: 12px;
+      line-height: 1;
+      padding: 6px 20px;
+      border: 1px solid #00FF00;
+      color: #00FF00;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    .detailBox {
+      top: 0;
+    }
+  }
+}
+
+.btnBox2 {
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 20px;
+  border: 1px solid #00FF00;
+  color: #00FF00;
+  border-radius: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.rhomboidWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 380px;
+  .rhomboid {
+    display: flex;
+    width: 190px;
+    flex-wrap: wrap;
+    transform: rotate(45deg);
+
+    position: relative;
+    overflow: hidden;
+  
+    .block {
+      width: 95px;
+      height: 95px;
+      overflow: hidden;
+      border: 1px solid #000;
+  
+      &.blockBg1 {
+        background-color: rgba(0, 163, 46, 0.6);
+      }
+      &.blockBg2 {
+        background-color: rgba(0, 134, 81, 0.6);
+      }
+      &.blockBg3 {
+        background-color: rgba(0, 163, 46, 0.6);
+      }
+      &.blockBg4 {
+        background-color: rgba(0, 103, 23, 0.6);
+      }
+  
+      &>.blockContent {
+        width: 140px;
+        height: 140px;
+        transform: rotate(-45deg);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -22px;
+        left: -22px;
+        white-space: pre-line;
+  
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+
+        cursor: pointer;
+      }
+
+      &>.popup {
+        width: 138px;
+        padding: 10px;
+        background-color: red;
+      }
+    }
+
+    .rhomboidPopup {
+      width: 138px;
+      height: 54px;
+      background-color: #000;
+      position: absolute;
+      transform: rotate(-45deg);
+      display: none;
+
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(../../../../assets/images/plant-based/border-tl.png);
+        height: 62%;
+        width: 57%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        background-image: url(../../../../assets/images/plant-based/border-br.png);
+        height: 62%;
+        width: 57%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+
+      &.popup1 {
+        top: 122px;
+        left: -24px;
+      }
+
+      &.popup2 {
+        top: 16px;
+        left: 81px;
+      }
+
+      &.popup3 {
+        top: 121px;
+        left: 79px;
+      }
+
+      &.popup4 {
+        top: 15px;
+        left: -24px;
+      }
+
+      &>.closeBtn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        width: 8px;
+        height: 8px;
+        z-index: 10;
+      }
+
+      &>.detail{
+        font-size: 10px;
+        color: #fff;
+        line-height: 1.3;
+        padding: 5px;
+        overflow: auto;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+      }
+    }
+
+    .rhomboidPopupHover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -100%;
+      left: -100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all linear 0.2s;
+      &.active {
+        top: 0;
+        left: 0;
+      }
+
+      &>.detail{
+        font-size: 10px;
+        color: #fff;
+        line-height: 1.3;
+        padding: 0;
+        overflow: auto;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        transform: rotate(-45deg);
+        padding: 30px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.imgContentBox2Wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .imgContentBox2 {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+  
+    width: 160px;
+    height: 160px;
+
+    display: flex;
+    justify-content: center;
+  
+    .detailBox {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 16px;
+      top: -100%;
+      left: 0;
+      transition: top ease-in-out 0.2s;
+  
+      font-size: 10px;
+      line-height: 1.2;
+      border-radius: 50%;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      .val {
+        color: rgba(255,255,255, 1);
+        margin-bottom: 10px;
+      }
+
+      .btnClost {
+        position: absolute;
+        bottom: 16px;
+      }
+    }
+  
+    &:hover {
+      .detailBox {
+        top: 0;
+      }
+    }
+  }
+
+  .imgTitlt {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 32px;
+  }
+}

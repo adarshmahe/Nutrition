@@ -1,0 +1,185 @@
+.filtermodal-container {
+  width: 409px;
+  height: auto;
+  flex-shrink: 0;
+  z-index: 9999;
+  display: block;
+  align-items: center;
+  background: var(--secondary-colors-gray-1, $grey1);
+  @include dropshadow;
+  padding: $space-20;
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    color: $black;
+    opacity: 1;
+    display: block;
+    //background: url(../../../assets/images/svg/calendar-icon.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+  }
+}
+.filter-time {
+  color: var(--primary-colors-base-green, $base-green);
+  font-family: unilever-shilling-medium;
+  font-size: $font-size-16;
+  border-bottom: 1px solid $grey3;
+  padding-bottom: 5px;
+  margin-bottom: $space-10;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.start-date,
+.end-date {
+  font-family: unilever-shilling-regular;
+  font-size: $font-size-14;
+  margin-right: $space-20;
+
+  input {
+    width: 100%;
+    height: 30px;
+    flex-shrink: 0;
+    background-color: $base-black;
+    color: $white-text;
+    border: 1px solid $grey3;
+    margin-top: 5px;
+    padding-left: $space-10;
+  }
+  .error-message {
+    color: $status-red;
+  }
+}
+
+.end-date {
+  margin-right: 0;
+}
+
+.fillter-category {
+  margin-top: $space-20;
+  margin-right: $space-10;
+  width: 100%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .category-wrapper {
+    height: 100px;
+    overflow: auto;
+    margin-top: $space-10;
+    max-width: 180px;
+
+    .category-item {
+      display: flex;
+      margin-bottom: 3px;
+      align-items: center;
+    }
+  }
+  .category-main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey3;
+    padding-bottom: 5px;
+
+    span {
+      color: var(--primary-colors-base-green, $base-green);
+      font-family: unilever-shilling-medium;
+      font-size: $font-size-16;
+    }
+  }
+  .category-input {
+    display: flex;
+    position: relative;
+
+    .input-search {
+      width: 100%;
+      background: none;
+      color: $white-text;
+      border: 1px solid $base-green;
+      padding: 7px 30px 7px 7px;
+    }
+    img {
+      right: 5px;
+      display: flex;
+      position: absolute;
+      top: 4px;
+    }
+  }
+  label {
+    font-family: unilever-shilling-regular;
+    font-size: $base-font-size;
+    margin-left: 5px;
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+  }
+
+  input[type='checkbox'] {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    border: 1px solid $white-text;
+    border-radius: 0;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 0.6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 18px;
+    width: 18px;
+    -webkit-appearance: none;
+    opacity: 0.5;
+  }
+
+  input[type='checkbox']:hover {
+    opacity: 1;
+  }
+
+  input[type='checkbox']:checked {
+    background-color: $base-green;
+    opacity: 1;
+    border: 1px solid $base-green;
+    &::before {
+      display: block;
+    }
+  }
+
+  input[type='checkbox']:before {
+    content: '';
+    position: relative;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid $base-black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translate(123%, -132%);
+    z-index: 2;
+    display: none;
+  }
+}
+
+.btn-filter {
+  width: 100%;
+  height: 40px;
+  background: var(--primary-colors-base-green, $base-green);
+  position: relative;
+  margin-top: $space-10;
+  color: $white-text;
+  font-family: unilever-shilling-medium;
+  font-size: $font-size-16;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $forest-green;
+  }
+}

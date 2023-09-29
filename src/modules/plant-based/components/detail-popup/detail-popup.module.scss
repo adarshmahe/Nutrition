@@ -1,0 +1,52 @@
+.customModalWrap {
+    :global(.ant-modal-content) {
+        padding: 0 !important;
+        background-color: transparent;
+    }
+}
+  
+.content {
+    padding: 45px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .imgBg {
+        width: 60%;
+    }
+
+    .descBox {
+        margin-left: 50px;
+        color: #fff;
+
+        .desc {
+            font-size: 14px;
+            line-height: 1.4;
+
+            margin-bottom: 45px;
+        }
+
+        .tagTitle {
+            font-size: 12px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .tagList {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tag {
+                font-size: 12px;
+                line-height: 1;
+                color: #00A32E;
+                border: 1px solid #00A32E;
+                padding: 5px 12px;
+                border-radius: 8px;
+                margin-left: 12px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

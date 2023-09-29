@@ -1,0 +1,12 @@
+.sustainability-item li {
+  line-height: $line-height-1;
+  font-weight: $font-weight-light;
+  font-size: $base-font-size;
+  text-transform: uppercase;
+}
+.sustainability-item li.active {
+  font-weight: $font-weight-light !important;
+}
+.sustainability-item {
+  margin-bottom: $space-50;
+}

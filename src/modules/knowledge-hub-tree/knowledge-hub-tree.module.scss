@@ -1,0 +1,525 @@
+@import '../../styles//variables.scss';
+
+.headerNav {
+  width: 100%;
+  height: 120px;
+  padding-left: 134px;
+  padding-top: 52px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  position: fixed;
+
+  .headerTitle {
+    width: 348px;
+    height: 55px;
+    background: url('../../assets/images/knowledge-hub-tree/konwledge-hub@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .userBox {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    position: absolute;
+    right: 41px;
+    top: 49px;
+    background: url('../../assets/images/concept-ai/user@2x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+@keyframes trans-into-left {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 134px;
+  }
+}
+
+@keyframes trans-into-right {
+  from {
+    right: -85px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.cockpitBox {
+  width: 85px;
+  height: 655px;
+  background-image: url('../../assets/images/knowledge-hub-tree/cockpit-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  &.right {
+    right: 0;
+    transform: translateY(-50%);
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-name: trans-into-right;
+  }
+  &.left {
+    left: 134px;
+    transform: rotateY(180deg) translateY(-50%);
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-name: trans-into-left;
+  }
+}
+
+.KnowledgeHubTree {
+  height: 100vh;
+  padding-left: 134px;
+  overflow: hidden;
+  position: relative;
+  background-color: #00001E;
+
+  .actionAndVideoContainer {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+
+    .videoItem {
+      position: relative;
+      left: 50%;
+      transition: opacity .3s;
+    }
+
+    .actionContainer {
+      width: 836px;
+      height: 663px;
+      position: absolute;
+      top: 142px;
+      left: 529px;
+
+      .modelBox {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color: #000000, $alpha: .8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: scale(100);
+      }
+
+      @keyframes rotate-animate {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes show-animate {
+        from {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .actionItem {
+        position: absolute;
+        user-select: none;
+      }
+
+      .actionSelf {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        .actionBg {
+          width: 100%;
+          height: 100%;
+          background-image: url('../../assets/images/knowledge-hub-tree/link-fruit.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+
+        .actionName {
+          width: 100%;
+          height: 100%;
+          font-size: 17px;
+          font-weight: bold;
+          color: #FFFFFF;
+          font-family: unilever-shilling-medium;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          a {
+            display: inline-block;
+            width: 100%;
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .actionLinksContainer {
+        width: 440px;
+        height: 440px;
+        transform: scale(0);
+        opacity: 0;
+        position: absolute;
+        top: calc(50% - 220px);
+        left: calc(50% - 220px);
+        z-index: 1;
+        transition: all .3s;
+
+        .linkBg {
+          width: 100%;
+          height: 100%;
+          background-image: url('../../assets/images/knowledge-hub-tree/active-bg.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation-timing-function: linear;
+          animation-duration: 5s;
+          animation-name: rotate-animate;
+          animation-iteration-count: infinite;
+        }
+
+        .linkBox {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          .linkItem {
+            width: 100px;
+            text-align: center;
+            position: absolute;
+            font-size: 16px;
+            font-family: unilever-shilling-medium;
+          }
+
+          a {
+            display: inline-block;
+            width: 100%;
+            color: #FFFFFF;
+
+            &:hover {
+              color: $status-green;
+            }
+          }
+        }
+      }
+
+      .actionDisable {
+        .actionSelf {
+          opacity: .8;
+          transition: unset;
+
+          &:hover {
+            transform: unset;
+          }
+        }
+      }
+
+      .actionAnimate {
+        .actionSelf {
+          .actionBg {
+            animation-timing-function: linear;
+            animation-duration: 5s;
+            animation-name: rotate-animate;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
+
+      .actionActive {
+        .actionSelf {
+          z-index: 2;
+          transform: scale(1.1);
+        }
+
+        .actionLinksContainer {
+          animation: show-animate .3s;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .actionDisabled1 {
+        width: 65px;
+        height: 65px;
+        top: 140px;
+        left: calc(135px + 36px);
+      }
+
+      .actionDisabled2 {
+        width: 65px;
+        height: 65px;
+        top: 256px;
+        left: calc(135px + 311px);
+      }
+
+      .actionDisabled3 {
+        width: 65px;
+        height: 65px;
+        top: 508px;
+        left: 85px;
+      }
+
+      .actionDisabled4 {
+        width: 65px;
+        height: 65px;
+        top: 508px;
+        left: calc(135px + 487px);
+      }
+
+      // Communication
+      .action1 {
+        width: 135px;
+        height: 135px;
+        top: 94px;
+        left: 438px;
+
+        // Global Campaign Test
+        .link1 {
+          top: 30px;
+          left: 170px;
+        }
+
+        // Need Scope
+        .link2 {
+          width: 70px !important;
+          top: 200px;
+          left: 350px;
+        }
+
+        // DBA
+        .link3 {
+          top: 350px;
+          left: 170px;
+        }
+
+        // Creative Tracker
+        .link4 {
+          top: 200px;
+          left: 10px;
+        }
+      }
+
+      // Market Performance
+      .action2 {
+        width: 135px;
+        height: 135px;
+        top: 304px;
+        left: 0px;
+
+        // Brand Power
+        .link1 {
+          top:40px;
+          left: 170px;
+        }
+
+        // Post Launch Evaluation
+        .link2 {
+          top: 200px;
+          left: 330px;
+        }
+
+        // Competitor Analysis
+        .link3 {
+          top: 200px;
+          left: 10px;
+        }
+      }
+
+      // Customer/Shopper
+      .action3 {
+        width: 135px;
+        height: 135px;
+        top: 240px;
+        left: calc(135px + 108px);
+
+        // Shopping Channel insights
+        .link1 {
+          top: 30px;
+          left: 190px;
+        }
+
+        // CVD
+        .link2 {
+          top: 210px;
+          left: 350px;
+        }
+
+        // Own the seasons
+        .link3 {
+          top: 200px;
+          left: 10px;
+        }
+      }
+
+      // Strategic Understanding
+      .action4 {
+        width: 150px;
+        height: 150px;
+        top: 240px;
+        left: calc(135px + 505px);
+
+        // Occasion & Needstate
+        .link1 {
+          top: 50px;
+          left: 170px;
+        }
+
+        // U&A
+        .link2 {
+          top: 110px;
+          left: 300px;
+        }
+
+        // Menu Check
+        .link3 {
+          top: 200px;
+          left: 350px;
+        }
+
+        // Top Dish
+        .link4 {
+          top: 350px;
+          left: 170px;
+        }
+
+        // Cash-strapped consumers
+        .link5 {
+          top: 280px;
+          left: 300px;
+        }
+
+        // Understanding of Plant-Based consumers
+        .link6 {
+          top: 280px;
+          left: 30px;
+        }
+
+        // GOTFL
+        .link7 {
+          top: 200px;
+          left: 10px;
+        }
+      }
+
+      // Trend
+      .action5 {
+        width: 90px;
+        height: 90px;
+        top: 476px;
+        left: calc(135px + 100px);
+
+        // Trend Localization
+        .link1 {
+          top: 30px;
+          left: 170px;
+        }
+
+        // Gen Z
+        .link2 {
+          top: 130px;
+          left: 320px;
+        }
+
+        // Sustainability
+        .link3 {
+          top: 240px;
+          left: 350px;
+        }
+
+        // Pop Culture
+        .link4 {
+          top: 340px;
+          left: 50px;
+        }
+
+        // Different dietary requirements
+        .link5 {
+          top: 320px;
+          left: 280px;
+        }
+
+        // Premiumisation
+        .link6 {
+          top: 240px;
+          left: 0px;
+        }
+
+        // Private Label
+        .link7 {
+          top: 120px;
+          left: 10px;
+        }
+      }
+
+      // Global Brand Strategy
+      .action6 {
+        width: 144px;
+        height: 144px;
+        top: 385px;
+        left: calc(135px + 308px);
+      }
+
+      // Innovation
+      .action7 {
+        width: 130px;
+        height: 130px;
+        top: 475px;
+        left: calc(135px + 570px);
+
+        // Meta Analysis
+        .link1 {
+          top: 30px;
+          left: 170px;
+        }
+
+        // Concept Testing
+        .link2 {
+          top: 350px;
+          left: 170px;
+        }
+      }
+    }
+  }
+}

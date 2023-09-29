@@ -1,0 +1,60 @@
+.headerNav {
+  width: 100%;
+  height: 120px;
+  padding-left: 74px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+
+  .logoBox {
+    width: 176px;
+    height: 74px;
+    margin-top: 45px;
+    // background: url('../../../../assets/images/concept-ai/logo@2x.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+
+  .headerTitle {
+    width: 471px;
+    height: 73px;
+    background: url('../../../../assets/images/concept-ai/header@2x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transform: translateY(40px);
+    cursor: pointer;
+  }
+
+  .userBox {
+    padding: 33px 36px;
+    display: flex;
+
+    .userItem {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+
+    .tool {
+      background: url('../../../../assets/images/concept-ai/tool@2x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .user {
+      background: url('../../../../assets/images/concept-ai/user@2x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

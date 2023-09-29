@@ -1,0 +1,138 @@
+.menuWrap {
+  margin: 0 auto;
+  max-width: 85%;
+  min-width: 400px;
+}
+
+.menuItemWrap {
+  position: relative;
+  margin-bottom: 26px;
+
+  .menuItem {
+    padding: 16px 30px;
+    border-radius: 10px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    cursor: pointer;
+    transition: all linear 2s;
+    background: linear-gradient(to right, rgba(0, 163, 46, 20%), rgba(0, 42, 3, 20%));
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      background: linear-gradient(to right, rgba(0, 163, 46, 80%), rgba(0, 42, 3, 80%));
+    }
+    
+    &.active {
+      background: linear-gradient(to right, rgba(0, 163, 46, 80%), rgba(0, 42, 3, 80%));
+    }
+    
+    .menuItemRight {
+      width: 30px;
+      height: 30px;
+      margin-right: 24px;
+    }
+  
+    .menuItemCenter{ 
+      width: 60%;
+      flex: 1;
+  
+      display: flex;
+      flex-direction: column;
+  
+      .title  {
+        font-size: 20px;
+        font-weight: 600;
+        color: #f1f1f1;
+      }
+  
+      .desc {
+        font-size: 16px;
+        margin-top: 6px;
+        color: #F1F1F1;
+        opacity: 0.6;
+        line-height: 23px;
+      }
+    }
+  
+    .menuItemLeft {
+      width: 30px;
+      height: 30px;
+      margin-left: 24px;
+    }
+
+    .menuItemRight {
+      transition: all linear 0.2s;
+      &.active {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .menuItemDetailWrap {
+    overflow: hidden;
+    transition: height ease-in-out 0.3s;
+
+    .menuItemDetail {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px 35px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+  
+      .optionItem {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        cursor: pointer;
+  
+        .img {
+          width: 30px;
+          height: 30px;
+        }
+  
+        .subTitle {
+          font-size: 20px;
+          font-weight: 600;
+          color: #f1f1f1;
+          margin-left: 33px;
+          margin-right: 28px;
+          line-height: 1;
+  
+          &.active {
+            color: rgba(0, 163, 46, 100%);
+            text-decoration: underline;
+          }
+        }
+  
+        .subDesc {
+          font-size: 16px;
+          color: #F1F1F1;
+          opacity: 0.5;
+          line-height: 23px;
+  
+          flex: 1;
+        }
+  
+  
+        &:hover {
+          .subTitle {
+            color: rgba(0, 163, 46, 100%);
+            text-decoration: underline;
+          }
+        }
+      }
+  
+      .comeSoon {
+        font-size: 20px;
+        color: #F1F1F1;
+        opacity: 0.5;
+        line-height: 23px;
+      }
+    }
+  }
+
+}

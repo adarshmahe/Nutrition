@@ -1,0 +1,56 @@
+.conceptBtn {
+  padding: 4px 12px;
+  border: 1px solid #78F550;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .6;
+  }
+  &.loading {
+    opacity: .8;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 1;
+    filter: grayscale(100%);
+  }
+  .btnIcon {
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../assets/images/concept-ai/upload@2x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    &.downloadData {
+      width: 20px;
+      height: 20px;
+      background-image: url('../../../../assets/images/concept-ai/download-data@2x.png');
+      background-position: 0px 1px;
+    }
+    &.downloadImg {
+      width: 18px;
+      height: 18px;
+      background-image: url('../../../../assets/images/concept-ai/download-img@2x.png');
+      background-position: 0px 1px;
+    }
+    &.extractText {
+      width: 18px;
+      height: 18px;
+      background-image: url('../../../../assets/images/concept-ai/extract@2x.png');
+      background-position: 0px 1px;
+    }
+  }
+  .btnText {
+    font-size: 13px;
+    font-weight: 300;
+    color: #1AFB0E;
+  }
+}

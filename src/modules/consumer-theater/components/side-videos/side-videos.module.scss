@@ -1,0 +1,154 @@
+@import '../../../../styles/variables.scss';
+
+.sideVideosContainer {
+  width: 0;
+  height: calc(100vh - 215px);
+  position: fixed;
+  bottom: 65px;
+  right: 0;
+  z-index: 10;
+  transition: width 0.2s ease-in-out;
+  &.sideVideoShow {
+    width: 442px;
+  }
+  .sideVideosBox {
+    width: 442px;
+    height: 100%;
+    .sideVideoHeader {
+      height: 32px;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 7px;
+      padding-right: 50px;
+      .sideVideoTitle {
+        font-size: 16px;
+        color: #FFF;
+        padding-top: 6px;
+      }
+      .sideVideoLibraryBtn {
+        width: 120px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $base-green;
+        font-size: 12px;
+        border: 2px solid $base-green;
+        border-radius: 16px;
+        padding-left: 16px;
+        padding-right: 30px;
+        user-select: none;
+        cursor: pointer;
+        .btnIcon {
+          width: 16px;
+          height: 12px;
+          margin-right: 16px;
+        }
+        &:hover {
+          opacity: .8;
+        }
+        &:active {
+          opacity: .6;
+        }
+      }
+    }
+    .sideVideosItemContainer {
+      height: calc(100% - 52px);
+      margin-top: 20px;
+      overflow-y: auto;
+    }
+    :global {
+      .ant-spin-nested-loading, .ant-spin-container {
+        height: 100%;
+      }
+    }
+    .emptyBox {
+      height: 100%;
+    }
+    .sideVideosWrapper {
+      .sideVideItem {
+        width: 386px;
+        height: 170px;
+        background-color: rgba(1, 7, 2, .4);
+        border-radius: 16px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 16px;
+        .sideVideoInfo {
+          width: 180px;
+          color: #FFF;
+          padding-top: 13px;
+          .sideVideoName {
+            height: 22px;
+            font-size: 13px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          .sideVideoContent {
+            height: 40px;
+            padding-left: 8px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            .sideVideoContentWrapper {
+              width: 258px;
+              height: 70px;
+              font-size: 12px;
+              line-height: 24px;
+              transform-origin: 0 0;
+              transform: scale(.6666);
+              overflow: hidden;
+            }
+          }
+          .sideVideoLabel {
+            width: 220px;
+            height: 10px;
+            margin-bottom: 9px;
+            .sideVideoLabelWrapper {
+              font-size: 12px;
+              opacity: .8;
+              transform-origin: 0 0;
+              transform: scale(.8333);
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+          .sideVideoAttitude {
+            font-size: 13px;
+            padding-left: 8px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .sideVideoItemBox {
+          width: 106px;
+          height: 150px;
+          position: relative;
+          cursor: pointer;
+          .sideVideoPoster {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          .videoPlayButtonIcon {
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          &:hover {
+            opacity: .8;
+          }
+          &:active {
+            opacity: .6;
+          }
+        }
+      }
+    }
+  }
+}

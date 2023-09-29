@@ -1,0 +1,61 @@
+.profile {
+  width: 36px;
+  height: 36px;
+  color: $white-text;
+  position: relative;
+  cursor: pointer;
+  z-index: 99;
+}
+.profile-icon {
+  cursor: pointer;
+}
+
+.profile-dropdown-container {
+  @include innerglow;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: $brand-secondary;
+  border: 1px solid $forest-green;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  width: 230px;
+  background: $grey1;
+  // background: linear-gradient(90deg, rgba(217, 217, 217, 0.00) 0%, rgba(0, 163, 46, 0.50) 100%);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+  &::after {
+    content: '';
+    width: 101px;
+    height: 1px;
+    background: $forest-green;
+    position: absolute;
+    top: 0;
+    left: -28px;
+    transform: rotate(132deg);
+  }
+  .dropdown-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 34px 24px;
+    img {
+      margin-bottom: 12px;
+    }
+    .user-email {
+      margin-bottom: 34px;
+      text-align: center;
+      font-family: unilever-shilling-regular;
+      font-size: $font-size-14;
+      font-weight: $font-weight-normal;
+    }
+    .username {
+      margin-bottom: 10px;
+      font-family: unilever-shilling-medium;
+      font-size: $base-font-size;
+      text-transform: capitalize;
+    }
+  }
+}

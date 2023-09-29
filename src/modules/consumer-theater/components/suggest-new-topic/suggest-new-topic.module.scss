@@ -1,0 +1,167 @@
+
+@import '../../../../styles/variables.scss';
+
+.myDialog {
+  :global {
+    .ant-modal-close {
+      top: 40px;
+      right: 50px;
+    }
+    .ant-modal-content {
+      box-shadow: unset;
+      background: transparent;
+    }
+  }
+}
+.closeBtn {
+  width: 24px;
+  height: 24px;
+  background: url('../../../../assets/images/concept-ai/close@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.dialogBox {
+  height: 480px;
+  background: rgba(0,0,0, .7);
+  .dialogMain {
+    height: 100%;
+  }
+  .dialogTitle {
+    height: 68px;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 68px;
+    color: #FFFFFF;
+    text-align: center;
+    background-image: linear-gradient(-90deg, rgba(0, 137, 15, .6), rgba(0, 0, 0, .0));
+    margin-left: 100px;
+    margin-right: 2px;
+    user-select: none;
+    .titleBox {
+      margin-right: 100px;
+    }
+  }
+  .conditionBox {
+    padding: 15px 68px;
+  }
+  .confirmBtn {
+    width: 232px;
+    height: 32px;
+    margin: 10px auto;
+  }
+}
+
+.formItem {
+  margin-bottom: 4px;
+  .itemName {
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 10px 0;
+    display: flex;
+    .subName {
+      font-size: 13px;
+      font-weight: 400;
+      opacity: 0.3;
+    }
+  }
+  .itemInput {
+    // width: 578px;
+    height: 40px;
+    :global {
+      .ant-input {
+        height: 100%;
+        font-size: 16px;
+        color: #FFF;
+        background-color: transparent;
+        border-color: $base-green;
+        &:hover, &:focus {
+          border-color: #00FF00;
+        }
+      }
+      .ant-select {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        color: #FFF;
+        .ant-select-selector {
+          height: 100%;
+          background-color: transparent;
+          border-color: $base-green;
+          .ant-select-selection-search {
+            height: 100%;
+          }
+          .ant-select-selection-item {
+            height: 100%;
+            line-height: 40px;
+            color: #FFF;
+            .ant-select-selection-item-remove {
+              color: #FFF;
+              &:hover {
+                opacity: .6;
+              }
+            }
+          }
+        }
+        .ant-select-arrow {
+          color: #FFF;
+        }
+        &.ant-select-focused, &:hover, &:focus {
+          .ant-select-selector {
+            border-color: #00FF00 !important;
+          }
+        }
+      }
+      .ant-cascader.ant-select-multiple {
+        .ant-select-selector {
+          .ant-select-selection-item {
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .itemImage {
+    width: 287px;
+    height: 170px;
+    background-color: rgba(0, 139, 16, .2);
+    transition: all .3s;
+    &:hover {
+      background-color: rgba(0, 139, 16, .3);
+    }
+    .imgItem {
+      width: auto !important;
+    }
+    :global {
+      .ant-upload-wrapper {
+        height: 100%;
+      }
+      .ant-upload {
+        border: 0;
+        padding: 0;
+        display: block;
+      }
+      .ant-upload-drag-container {
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .anticon {
+        height: 24px;
+        font-size: 24px;
+        color: #78F550;
+      }
+    }
+  }
+}

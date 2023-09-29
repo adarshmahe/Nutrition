@@ -1,0 +1,23 @@
+.modal-body-message {
+  width: 200px;
+  height: fit-content;
+  z-index: 999;
+  padding: $space-20;
+  background: $brand-secondary;
+  color: $black;
+  @include position-absolute-center;
+  @include dropshadow;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: $base-black;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-family: unilever-shilling-regular;
+  font-size: $base-font-size;
+}
+
+.modal-container {
+  position: relative;
+}

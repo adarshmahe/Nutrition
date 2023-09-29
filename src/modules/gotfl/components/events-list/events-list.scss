@@ -1,0 +1,52 @@
+.event-list {
+  margin: $space-20 0;
+  flex: 1 0 0;
+  border: 1px solid $base-green;
+  padding: $space-20 $space-20 $space-10;
+
+  &.containerwrapper {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: $font-size-20;
+    line-height: $line-height-1-6;
+    font-family: unilever-shilling-medium;
+    margin-bottom: $space-20;
+  }
+
+  ul {
+    li {
+      margin-bottom: $space-20;
+
+      ul {
+        margin-bottom: $space-40;
+      }
+
+      &:last-child ul {
+        margin-bottom: 0;
+      }
+
+      .event-date {
+        font-size: $font-size-20;
+        line-height: $line-height-1-4;
+        color: $base-green;
+        margin-bottom: $space-10;
+        font-family: unilever-shilling-medium;
+      }
+
+      .event-title {
+        font-size: $font-size-16;
+        font-family: unilever-shilling-medium;
+        line-height: $line-height-1-4;
+      }
+
+      .event-description {
+        font-size: $base-font-size;
+        font-family: unilever-shilling-regular;
+        line-height: $line-height-1-4;
+      }
+    }
+  }
+}

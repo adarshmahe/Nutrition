@@ -1,0 +1,106 @@
+// mixin for media-queries
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint ==xs {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==sm {
+    @media (min-width: 576px) and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==md {
+    @media (min-width: 768px) and (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==lg {
+    @media (min-width: 992px) and (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// mixin for animation
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  @-o-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// flex center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// position absolute center
+@mixin position-absolute-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+//modal backdrop
+@mixin modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $grey1;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+// drop shadow
+@mixin dropshadow {
+  box-shadow: 4px 4px 4px rgb(0 163 46 / 25%);
+  -moz-box-shadow: 4px 4px 4px rgb(0 163 46 / 25%);
+  -webkit-box-shadow: 4px 4px 4px rgb(0 163 46 / 25%);
+}
+
+// inner glow default
+@mixin innerglow {
+  box-shadow: 0 0 12px rgb(0 163 46 / 50%) inset;
+  -moz-box-shadow: 0 0 12px rgb(0 163 46 / 50%) inset;
+  -webkit-box-shadow: 0 0 12px rgb(0 163 46 / 50%) inset;
+}
+
+// inner glow hover
+@mixin innerglow-hover {
+  box-shadow: 0px 0px 20px $base-green inset;
+  -moz-box-shadow: 0px 0px 20px $base-green inset;
+  -webkit-box-shadow: 0px 0px 20px $base-green inset;
+}

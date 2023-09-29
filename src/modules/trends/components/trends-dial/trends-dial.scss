@@ -1,0 +1,231 @@
+.parent-segment {
+  .echarts-for-react {
+    @extend .learning-bg-video;
+    position: fixed !important;
+    height: 100% !important;
+  }
+
+  &.active {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $space-40;
+    position: relative;
+
+    .echarts-for-react {
+      position: relative !important;
+    }
+  }
+}
+
+.trends-select {
+  display: flex;
+  width: 100px;
+  padding-left: 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trends-model-container {
+  border: 1px solid;
+}
+
+.segment-popup.containerwrapper {
+  min-height: 550px;
+  display: block;
+  flex: 0 0 435px;
+  margin-bottom: $space-30;
+}
+
+.segment-data {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.trends-model {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trends-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid $forest-green;
+  margin: 0px 0px 10px 0px;
+  width: 165px;
+  padding: 0px 8px 8px 8px;
+  justify-content: space-between;
+
+  h2 {
+    flex: 0 0 50%;
+  }
+
+  span {
+    font-size: $font-size-18;
+    font-family: unilever-shilling-medium;
+  }
+
+  p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}
+
+.close-trends-popup {
+  cursor: pointer;
+  text-align: center;
+  font-size: $font-size-16;
+  display: flex;
+  color: $white-text;
+  line-height: $line-height-1;
+  margin-bottom: $space-20;
+}
+
+.trends-consumer {
+  width: 100%;
+  h4 {
+    border-bottom: 1px solid $grey3;
+    font-size: $font-size-18;
+    text-transform: capitalize;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+}
+
+.sublist {
+  margin-bottom: $space-30;
+
+  > li {
+    margin-top: $space-20;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.clickable {
+    li {
+      cursor: pointer;
+
+      &:hover {
+        color: $base-green;
+
+        .percentage-box {
+          display: flex;
+          li {
+            color: $white-text;
+          }
+        }
+      }
+
+      a {
+        color: $white-text;
+
+        &:hover {
+          color: $base-green;
+        }
+      }
+    }
+  }
+}
+
+.percentage-box {
+  display: none;
+  position: absolute;
+  right: 0;
+
+  li {
+    width: 64px;
+    border: 1px solid $forest-green;
+    margin-right: $space-10;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1px 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .total-percentage {
+    font-size: 11px;
+    font-family: unilever-shilling-medium;
+    flex: 0 0 70%;
+  }
+
+  .percentage-icon {
+    flex: 0 0 30%;
+
+    img {
+      width: 16px;
+    }
+  }
+
+  .percetage-title {
+    font-size: $font-size-12;
+  }
+}
+
+.consumer-sub {
+  display: flex;
+  width: 386px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.trend-fort {
+  color: var(--primary-colors-white-text, $white-text);
+  font-family: Unilever Shilling;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.trendgrade {
+  position: absolute;
+  right: 0;
+}
+
+.trends-country-selection {
+  position: absolute;
+  z-index: 9;
+  display: inline-block;
+
+  select {
+    background: $grey1;
+    color: $white-text;
+    border: 1px solid $base-green;
+    padding: 5px;
+    min-width: 100px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.categories {
+  margin-top: 50px;
+}
+.outer-details {
+  h3 {
+    font-size: $font-size-20;
+    text-transform: capitalize;
+    font-family: unilever-shilling-medium;
+    margin-bottom: $space-10;
+  }
+
+  span {
+    font-size: $font-size-12;
+  }
+}
+.negative-percentage {
+  color: red;
+}

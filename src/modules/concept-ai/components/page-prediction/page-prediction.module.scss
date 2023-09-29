@@ -1,0 +1,163 @@
+.stepContainer {
+  width: 880px;
+  display: flex;
+  align-items: center;
+  .stepItem {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    .stepNum {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #A3BFA4;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+    .stepName {
+      flex: 1;
+      white-space: nowrap;
+      font-size: 21px;
+      font-weight: 400;
+      color: #FFFFFF;
+      opacity: 0.5;
+    }
+    .stepLine {
+      width: 38px;
+      height: 2px;
+      background-color: #A3BFA4;
+      margin-right: 24px;
+    }
+    &.active {
+      .stepNum {
+        background-color: #1AFB0E;
+      }
+      .stepName {
+        opacity: 1;
+        color: #1AFB0E;
+      }
+      .stepLine {
+        background-color: #1AFB0E;
+      }
+    }
+  }
+}
+
+.predictionPage {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  position: relative;
+  transition: all .3s linear;
+  .pageContainer {
+    width: 100%;
+  }
+  &.stepOne {
+    width: 1524px;
+    .pageContainer {
+      display: flex;
+      justify-content: space-between;
+      .infoFormContainer {
+        width: 680px;
+        .contentBox {
+          height: 700px;
+        }
+      }
+      .infoTextContainer {
+        width: 788px;
+        .contentBox {
+          height: 700px;
+        }
+      }
+    }
+  }
+  &.stepTwo {
+    width: 1420px;
+    .contentBox {
+      height: 600px;
+    }
+  }
+  &.stepThree {
+    width: 1420px;
+    .contentBox {
+      min-height: 980px;
+    }
+    .footerBtn {
+      .btnItem {
+        margin-right: 130px;
+      }
+    }
+  }
+  .footerBtn {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    .btnItem {
+      width: 280px;
+      height: 60px;
+      font-size: 25px;
+      font-weight: 600;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      margin-right: 40px;
+      user-select: none;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .redoIcon {
+      width: 24px;
+      height: 24px;
+      background: url('../../../../assets/images/concept-ai/redo@2x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin-right: 25px;
+    }
+    .prevIcon {
+      margin-right: 25px;
+      :global(.anticon) {
+        font-size: 24px;
+      }
+    }
+    .btnEmpty {
+      border: 2px solid rgba(255, 255, 255, .5);
+      color: rgba(255, 255, 255, .5);
+      &:active {
+        opacity: .6;
+      }
+    }
+    .btnSolid {
+      background-color: #057905;
+    }
+    .disabled {
+      background-color: rgba(255, 255, 255, .5) !important;
+      cursor: not-allowed;
+    }
+  }
+  
+}
+
+.submittingText {
+  // width: 873px;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 18px;
+  background: rgba(38, 37, 36, 1);
+}

@@ -1,0 +1,287 @@
+// RISKY
+$color1: #FFC000;
+// READY
+$color2: #92D050;
+// OUTSTANDING
+$color3: #00B0F0;
+.resultCom {
+  padding: 30px 70px 10px;
+  .partHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 0;
+    background-color: rgba(0, 47, 2, .2);
+    .imgBox {
+      flex-shrink: 0;
+      width: 580px;
+      height: 308px;
+      margin-right: 62px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .textBox {
+      flex: 1;
+      .title {
+        font-size: 29px;
+        font-weight: bold;
+        color: #FFFFFF;
+        margin-bottom: 28px;
+      }
+      .textContent {
+        font-size: 21px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 29px;
+      }
+    }
+  }
+  .partTool {
+    height: 100px;
+    margin-top: 34px;
+    position: relative;
+    .header {
+      font-size: 29px;
+      font-weight: bold;
+      color: #1AFB0E;
+      text-align: center;
+    }
+    .tool {
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: right;
+      .btns {
+        display: flex;
+        margin-bottom: 32px;
+      }
+      .check {
+        font-size: 17px;
+        font-weight: 400;
+        text-decoration: underline;
+        color: rgba(2555, 255, 255, .4);
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+          opacity: .8;
+        }
+        &:active {
+          opacity: .6;
+        }
+      }
+    }
+  }
+  .tableBox {
+    height: 245px;
+    padding-bottom: 25px;
+    margin-top: 20px;
+    position: relative;
+    .line {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(0, 137, 15, 0.2), rgba(0, 137, 15, 0.8), rgba(0, 137, 15, 0.2));
+      position: absolute;
+      left: 0;
+      &.line1 {
+        top: 0;
+      }
+      &.line2 {
+        top: 100px;
+      }
+      &.line3 {
+        bottom: 0;
+      }
+    }
+    .verticalLine {
+      width: 1px;
+      height: 245px;
+      background: linear-gradient(0deg, rgba(0, 137, 15, 0.2), rgba(0, 137, 15, 0.8), rgba(0, 137, 15, 0.2));
+      position: absolute;
+      left: 110px;
+      top: 0;
+    }
+    .tableColumnContainer {
+      display: flex;
+      align-items: center;
+      .tableColumnType {
+        width: 96px;
+      }
+      .columns {
+        flex: 1;
+        padding-left: 45px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .tableHeaderBox {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .headerItem {
+          font-size: 17px;
+          font-weight: 400;
+          color: #FFFFFF;
+          line-height: 29px;
+          text-align: center;
+        }
+      }
+      .tableCellBox {
+        height: 145px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .tableCellItem {
+          width: 76px;
+          height: 76px;
+          background: rgba(125, 125, 125, .3);
+          position: relative;
+          cursor: pointer;
+          &:hover {
+            opacity: .9;
+          }
+          &:global {
+            &.type-0 {
+              background: $color1;
+            }
+            &.type-1 {
+              background: $color2;
+            }
+            &.type-2 {
+              background: $color3;
+            }
+          }
+        }
+      }
+    }
+  }
+  .labelContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 20px;
+    .labelItem {
+      display: flex;
+      align-items: center;
+      margin-right: 75px;
+      &:last-child {
+        margin: 0;
+      }
+      .labelBox {
+        width: 40px;
+        height: 40px;
+        margin-right: 32px;
+      }
+      .labelName {
+        font-size: 21px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 29px;
+      }
+      &:global(.type-0) {
+        :local(.labelBox) {
+          background: $color1;
+        }
+      }
+      &:global(.type-1) {
+        :local(.labelBox) {
+          background: $color2;
+        }
+      }
+      &:global(.type-2) {
+        :local(.labelBox) {
+          background: $color3;
+        }
+      }
+    }
+  }
+  .printContentAnother {
+    margin-top: 80px;
+    .partItem {
+      margin-top: 40px;
+      .partItemHeader {
+        height: 40px;
+        display: flex;
+        margin-bottom: 30px;
+        .partLabel {
+          padding: 0 20px;
+          .labelBox {
+            width: 40px;
+            height: 40px;
+            &:global(.type-0) {
+              background: $color1;
+            }
+            &:global(.type-1) {
+              background: $color2;
+            }
+            &:global(.type-2) {
+              background: $color3;
+            }
+          }
+        }
+        .partLabelName {
+          font-size: 30px;
+          font-weight: 500;
+          color: #FFFFFF;
+          line-height: 40px;
+        }
+      }
+      .partBody {
+        padding-left: 80px;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
+.closeBtn {
+  width: 24px;
+  height: 24px;
+  background: url('../../../../../../assets/images/concept-ai/close@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.dialogBox {
+  background: rgba(0,0,0, .9);
+  .dialogTitle {
+    font-size: 21px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .dialogMain {
+    padding: 50px 78px;
+  }
+}
+
+.richTextproductName {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+.richTextContainer {
+  word-break: break-word;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+:global{
+  #print-box {
+    width: 1560px;
+    padding: 130px;
+    background: #0C130B;
+    display: none;
+    :local(.partTool) {
+      height: 40px;
+    }
+  }
+}

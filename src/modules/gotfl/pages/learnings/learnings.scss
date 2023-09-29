@@ -1,0 +1,31 @@
+.left-navigation {
+  position: fixed;
+  height: 100vh;
+  z-index: 10;
+  float: left;
+  width: 280px;
+  top: 0;
+}
+
+.sub-container {
+  margin-left: 280px;
+  border-bottom: 1px solid $grey1;
+}
+
+.learning-bg-video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flex-center;
+}
+
+.horizontal-nav-container {
+  position: relative;
+}
+.search-nav-container {
+  margin-top: 10px;
+  position: relative;
+}

@@ -1,0 +1,31 @@
+.modal-body {
+  width: 436px;
+}
+
+.modal-body > .modal-container > .buttons {
+  margin-top: $space-20;
+}
+
+.close {
+  margin-right: 12px;
+}
+
+.cancel-button {
+  @extend .btn;
+  border: 1px solid $forest-green;
+}
+
+.delete-button {
+  @extend .btn;
+  border: 1px solid $base-green;
+  background: none;
+
+  &:hover {
+    border: 1px solid $forest-green;
+  }
+}
+
+.modal-body > .modal-container > p,
+.buttons {
+  text-align: center;
+}

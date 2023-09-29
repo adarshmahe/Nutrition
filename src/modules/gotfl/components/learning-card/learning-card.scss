@@ -1,0 +1,213 @@
+.my-learning-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: $space-20;
+}
+
+.card-container {
+  margin: $space-20;
+  background: $grey1;
+  position: relative;
+  z-index: 9;
+  transition: transform 0.2s;
+  .add-fav {
+    @include position-absolute-center;
+    width: 225px;
+    height: 58px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: $base-black;
+    font-family: unilever-shilling-medium;
+    font-size: $font-size-16;
+    background: var(--unilever-brand-colors-ul-white, $white-text);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .success-message {
+    position: relative;
+    width: 100%;
+    min-height: 310px;
+    overflow: hidden;
+
+    &:before {
+      content: ' ';
+      background: $base-black;
+      width: 100%;
+      height: 350px;
+      bottom: 0;
+      opacity: 0.6;
+      z-index: 9;
+      @include position-absolute-center;
+    }
+  }
+  &:hover {
+    @include dropshadow;
+    z-index: 99;
+    transform: scale(1.05);
+    .card-video-title {
+      display: none;
+    }
+
+    .card {
+      padding: $space-10 $space-10 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .expandable {
+      visibility: visible;
+    }
+  }
+
+  .card {
+    height: 208px;
+    overflow: hidden;
+
+    &::before {
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      background-color: $base-green;
+      position: absolute;
+      opacity: 0.8;
+      mix-blend-mode: hue;
+    }
+
+    img,
+    video {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+
+  .expandable {
+    background-color: $grey1;
+    visibility: hidden;
+    z-index: 1;
+    height: fit-content;
+    width: 100%;
+    padding: $space-10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include dropshadow;
+
+    .card-dscp {
+      font-size: $font-size-12;
+      line-height: $line-height-1-6;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      font-family: unilever-shilling-regular;
+    }
+  }
+
+  .card-btn {
+    text-align: right;
+    cursor: pointer;
+
+    button {
+      font-size: $base-font-size;
+      border: none;
+      background: none;
+      color: $base-green;
+      text-transform: lowercase;
+      position: relative;
+      // padding-right: $space-20;
+      font-family: unilever-shilling-medium;
+      cursor: pointer;
+      text-shadow: 0 0 12px $base-green;
+
+      &::after {
+        content: ' ';
+        //background: url('../../../../assets/images/svg/chevron-right-green.svg') no-repeat;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: -3px;
+        top: 4px;
+      }
+
+      .chevron-img {
+        vertical-align: -4px;
+      }
+    }
+  }
+}
+
+.card-icon-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  li {
+    margin-left: $space-10;
+    color: $base-black;
+    cursor: pointer;
+    a {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.containerwrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid $base-green;
+  padding: 20px;
+  position: relative;
+  font-family: unilever-shilling-regular;
+  @include innerglow;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: $black;
+    top: -5px;
+    right: -13px;
+    box-shadow: 0px 1px 1px rgba(0, 163, 46, 0.5);
+    border-bottom: 1px solid $base-green;
+  }
+
+  .cardwrapper {
+    display: block;
+    flex: 0 0 25%;
+  }
+}
+
+.infinite-scroll-component {
+  overflow: initial !important;
+}
+
+.video-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.learning-videos {
+  height: 100%;
+  width: 100%;
+  border: none;
+}

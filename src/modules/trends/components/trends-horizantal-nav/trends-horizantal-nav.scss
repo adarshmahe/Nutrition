@@ -1,0 +1,68 @@
+.trends-horizontal-items-container {
+  display: flex;
+
+  .trends-title {
+    font-family: unilever-shilling-regular;
+    font-size: $font-size-22;
+    color: $white-text;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-1-2;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: $space-10;
+    display: flex;
+
+    img {
+      width: 27px;
+      height: 27px;
+    }
+  }
+}
+
+.trends-subnavigation {
+  border-bottom: 1px solid $grey3;
+  display: flex;
+  font-family: unilever-shilling-regular;
+  font-size: $font-size-16;
+  font-weight: $font-weight-semiBold;
+  line-height: $line-height-1-2;
+  color: $grey4;
+  padding-bottom: 5px;
+  margin-top: $space-20;
+  
+  div {
+    &.active {
+      font-weight: $font-weight-bold;
+      color: $white-text;
+    }
+  }
+  .search-analysis {
+    margin-right: 4px;
+  }
+
+  .tik-tok-resouce {
+    margin-left: 4px;
+  }
+}
+
+.toggle-button {
+  padding: 3px;
+  border: 1px solid $base-green;
+
+  button {
+    @extend .btn;
+    background: none;
+    font-size: $font-size-18;
+    font-weight: $font-weight-normal;
+
+    &.active {
+      background: $forest-green;
+      font-size: $font-size-18;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.horizontal-nav-container {
+  padding-top: 0.5em;
+}

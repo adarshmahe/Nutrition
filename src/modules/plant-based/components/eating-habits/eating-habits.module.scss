@@ -1,0 +1,24 @@
+@import '../common.scss';
+
+.filterBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .btnList {
+    flex: 1;
+  }
+}
+
+.downloadWrap {
+  display: flex;
+  align-items: center;
+
+  .label {
+    font-size: 12px;
+    line-height: 1;
+    color: #00A22E;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+}

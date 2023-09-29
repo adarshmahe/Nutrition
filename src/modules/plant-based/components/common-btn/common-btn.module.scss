@@ -1,0 +1,17 @@
+.btnWrap {
+  padding: 6px 20px;
+  color: #00A32E;
+  line-height: 1;
+  font-size: 14px;
+  border: 1px solid #00A32E;
+  border-radius: 20px;
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  &.active {
+    color: #fff;
+    background-color: #00A32E;;
+  }
+}

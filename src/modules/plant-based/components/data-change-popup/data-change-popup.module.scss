@@ -1,0 +1,99 @@
+.customModalWrap {
+    :global(.ant-modal-content) {
+        padding: 0 !important;
+        background-color: transparent;
+    }
+}
+  
+.content {
+    padding: 45px 80px;
+
+    .desc {
+        font-size: 18px;
+        color: #fff;
+        line-height: 1.4;
+    }
+
+    .echartsLabel {
+        font-size: 14px;
+        color: rgba(255,255,255, 0.6);
+        margin-bottom: 10px;
+    }
+}
+
+.inputBorder {
+    display: inline-block;
+    padding: 4px;
+    background-image: url('../../../../assets/images/concept-ai/input-border@2x.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  
+    :global {
+      .ant-select {
+        width: 122px;
+        height: 28px;
+        overflow: hidden;
+        position: relative;
+        top: 2px;
+  
+        .ant-select-selector {
+          height: 28px;
+          line-height: 28px;
+          background-color: transparent;
+          border: 0;
+          box-shadow: unset !important;
+          padding-top: 0;
+  
+          .ant-select-selection-overflow {
+            height: 28px;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+          }
+  
+          .ant-select-selection-search-input,
+          .ant-select-selection-placeholder,
+          .ant-select-selection-item {
+            color: #FFF;
+            line-height: 28px;
+          }
+          .ant-select-selection-item {
+            color: #909399;
+            background: rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            margin-right: 2px;
+          }
+          .ant-select-selection-overflow-item-suffix {
+            width: 38px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            .ant-select-selection-search-input {
+              height: 100%;
+            }
+          }
+        }
+        &.ant-select-single {
+          .ant-select-selection-item {
+            margin-right: 12px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding: 0 8px;
+            border-radius: 4px;
+          }
+        }
+  
+        .ant-select-arrow {
+          color: #FFF;
+        }
+  
+        .ant-select-clear {
+          background: transparent;
+          color: #FFF;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,406 @@
+.trends-detail-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.function-nutrition-desc {
+  flex: 0 0 50%;
+
+  p {
+    font-family: unilever-shilling-regular;
+    font-size: $font-size-16;
+    line-height: $line-height-1-6;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: pre-line;
+  }
+}
+
+.search-innovation-wrapper {
+  display: flex;
+  flex: 0 0 45%;
+  justify-content: space-between;
+}
+
+.two-graph {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: $space-60;
+
+  h2 {
+    font-size: $base-font-size;
+    padding-left: $space-20;
+  }
+}
+
+.line-graph-chart {
+  position: relative;
+  width: 550px;
+  height: 400px;
+  padding: $space-20;
+  margin-bottom: $space-60;
+  border: 1px solid $base-green;
+  box-shadow: 0px 0px 12px 0px rgba(0, 163, 46, 0.75) inset;
+  -webkit-clip-path: polygon(0 10%, 5% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 10%, 5% 0, 100% 0, 100% 100%, 0 100%);
+
+  @include respond-to(lg) {
+    width: 480px;
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    width: 65px;
+    height: 1px;
+    background: $base-green;
+    transform: rotate(-54deg);
+    left: -14px;
+    top: 12px;
+
+    @include respond-to(lg) {
+      transform: rotate(-62deg);
+      left: -19px;
+    }
+  }
+}
+
+.year-select {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.search-tik-tok-group {
+  flex: 0 0 45%;
+}
+
+.trends-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.trends-detail-title {
+  margin-bottom: $space-40;
+
+  h2 {
+    margin-right: 5px;
+    text-transform: capitalize;
+
+    img {
+      cursor: pointer;
+    }
+
+    a {
+      color: $white-text;
+      margin-right: 5px;
+      &:hover {
+        color: $base-green;
+      }
+    }
+  }
+}
+
+.trends-search-button {
+  background-color: $grey2;
+  color: $white-text;
+  border: 1px solid $base-green;
+  font-family: unilever-shilling-medium;
+  font-size: $base-font-size;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  padding: 15px 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grey3;
+  }
+}
+
+.competitor-innovation-group {
+  flex: 0 0 45%;
+}
+.comp-inno {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto $space-30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--secondary-colors-gray-1, $grey1);
+  box-shadow: 0px 0px 12px 0px rgba(0, 163, 46, 0.75) inset;
+  -webkit-clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 0 100%);
+
+  &::before {
+    position: absolute;
+    content: ' ';
+    width: 70px;
+    height: 1px;
+    background: rgb(0 163 46 / 36%);
+    top: 0;
+    right: -15px;
+    transform: rotate(45deg);
+  }
+
+  img {
+    width: 60%;
+  }
+}
+
+.competitor-innovation-button {
+  background-color: $grey2;
+  color: $white-text;
+  border: 1px solid $base-green;
+  font-family: unilever-shilling-medium;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.search-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  font-family: unilever-shilling-regular;
+  margin: $space-50 0;
+
+  .search-cardwrapper {
+    display: block;
+    flex: 0 0 31.33%;
+    margin: $space-10;
+  }
+}
+
+.search-card-container {
+  background: $grey1;
+  position: relative;
+  z-index: 9;
+  transition: transform 0.2s;
+
+  &:hover {
+    @include dropshadow;
+
+    .search-card {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .search-card {
+    height: 250px;
+    overflow: hidden;
+
+    &::before {
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      background-color: $base-green;
+      position: absolute;
+      opacity: 0.8;
+      mix-blend-mode: hue;
+    }
+
+    img,
+    video {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      height: 100%;
+    }
+  }
+
+  .title-block {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    flex-shrink: 0;
+    background: var(--secondary-colors-base-black, #1c1c1c);
+  }
+
+  .card-title {
+    color: var(--primary-colors-white-text, $white-text);
+    font-family: unilever-shilling-medium;
+    font-size: $font-size-18;
+    position: absolute;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    padding: 12px 10px 13px;
+  }
+}
+
+.search-card:hover .search-overlay {
+  opacity: 1;
+}
+
+.search-card:hover .title-block {
+  opacity: 0;
+}
+
+.search-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  padding: $space-20;
+  text-align: center;
+
+  .card-title-1 {
+    color: var(--primary-colors-white-text, $white-text);
+    font-family: unilever-shilling-medium;
+    font-size: $font-size-18;
+    position: absolute;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    top: 0px;
+    left: $space-20;
+  }
+
+  .desc {
+    color: var(--primary-colors-white-text, $white-text);
+    font-family: unilever-shilling-regular;
+    font-size: $font-size-14;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    text-align: left;
+  }
+}
+.btn-down {
+  display: flex;
+  width: 104px;
+  padding-left: 3px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #fdfffd;
+  cursor: pointer;
+  &.active {
+    border: 1px solid $base-green;
+  }
+
+  span {
+    color: $white-text;
+    font-family: unilever-shilling-regular;
+  }
+
+  img {
+    color: $white-text;
+  }
+
+  .up-arrow-sort {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      rgb(0, 163, 46) 0%,
+      rgb(0, 163, 46) 0%,
+      rgba(0, 163, 46, 0.7) 0%,
+      rgba(0, 163, 46, 0) 50%,
+      rgb(0, 163, 46) 250%,
+      rgba(0, 163, 46, 0.2623643207) 100%
+    );
+  }
+}
+.item-list {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  min-width: 103px;
+  top: 40px;
+  background: var(--secondary-colors-gray-1, #18181b);
+  box-shadow: 4px 4px 4px rgba(0, 163, 46, 0.25);
+  -moz-box-shadow: 4px 4px 4px rgba(0, 163, 46, 0.25);
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 163, 46, 0.25);
+  z-index: 999;
+  flex-direction: column;
+  align-items: baseline;
+  font-size: 1em;
+  font-family: unilever-shilling-regular;
+  border: none;
+
+  li {
+    margin-bottom: $space-10;
+  }
+}
+.item-list .item-radio-button {
+  position: relative;
+  border: 1px solid $white-text;
+  border-radius: 0;
+  background: $base-green;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 5px 0 15px;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 18px;
+  width: 18px;
+  opacity: 0.5;
+}
+
+label {
+  font-family: unilever-shilling-regular;
+  font-size: $base-font-size;
+  margin-left: 5px;
+  display: block;
+}
+
+input[type='radio'] {
+  position: relative;
+  border: 1px solid $white-text;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 3px 0 5px 15px;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 18px;
+  width: 18px;
+  //-webkit-appearance: none;
+  opacity: 0.5;
+}
+
+input[type='radio']:hover {
+  opacity: 1;
+}
+
+input[type='radio']:checked {
+  background-color: $base-green !important;
+  opacity: 1;
+  border: 1px solid $base-green !important;
+
+  &::before {
+    display: block;
+  }
+}
+
+input[type='radio']:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  z-index: 2;
+  display: none;
+}
+
+.search-wrapper {
+  width: 100%;
+}

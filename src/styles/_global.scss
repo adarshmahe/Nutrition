@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: unilever-shilling-regular;
+}
+
+body {
+  font-size: 14px;
+  line-height: normal;
+  color: $white-text;
+  background-color: $grey1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $base-green;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $base-green;
+}
+
+.btn {
+  padding: $space-10 $space-20;
+  background: $base-green;
+  color: $white-text;
+  text-align: center;
+  font-size: $base-font-size;
+  font-family: unilever-shilling-regular;
+  cursor: pointer;
+  border: none;
+  line-height: $line-height-1-6;
+}
+
+h2 {
+  font-size: $font-size-24;
+  font-family: unilever-shilling-medium;
+}

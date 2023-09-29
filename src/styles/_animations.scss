@@ -1,0 +1,29 @@
+// fade in animation
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// spinner animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// arrow bounce animation
+@keyframes bounce {
+  0% {opacity: 1; transform: translateX(0px) scale(1);}
+  25%{opacity: 0.3; transform:translateX(0px) scale(0.9);}
+  26%{opacity: 0.3; transform:translateX(0px) scale(0.9);}
+  55% {opacity: 1; transform: translateX(0px) scale(1);}
+}

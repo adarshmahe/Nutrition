@@ -1,0 +1,13 @@
+.myEchartsMap {
+  height: 100%;
+  :global {
+    .ant-spin-nested-loading, .ant-spin-container {
+      height: 100%;
+    }
+    .echarts-for-react {
+      height: calc(100% + 140px) !important;
+      position: relative !important;
+      transform: translateY(-140px);
+    }
+  }
+}

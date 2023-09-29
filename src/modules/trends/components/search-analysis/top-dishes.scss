@@ -1,0 +1,52 @@
+.top-dishesh {
+  margin: $space-30 0 $space-50 !important;
+  border: none;
+
+  .echarts-for-react {
+    height: 600px !important;
+  }
+}
+
+.top-dishes-container {
+  .top-section {
+    font-family: unilever-shilling-regular;
+    font-size: $font-size-16;
+    font-weight: $font-weight-bold;
+    line-height: 1.6;
+    img {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 3px;
+      margin-right: 10px;
+    }
+  }
+
+  .learning-tags {
+    .tags {
+      background: $grey2;
+
+      &:hover {
+        background: $base-green;
+      }
+    }
+
+    .tags.active-dish {
+      font-family: unilever-shilling-regular;
+      font-size: $base-font-size;
+      font-weight: $font-weight-normal;
+      cursor: pointer;
+      background: $grey2;
+      border: 1px solid $base-green;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 163, 46, 1) 0%,
+        rgba(0, 163, 46, 1) 0%,
+        rgba(0, 163, 46, 0.7) 0%,
+        rgba(0, 163, 46, 0) 50%,
+        rgba(0, 163, 46, 1) 250%,
+        rgba(0, 163, 46, 0.2623643207282913) 100%
+      );
+    }
+  }
+}

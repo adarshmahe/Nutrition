@@ -1,0 +1,37 @@
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $grey2;
+  color: $white-text;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+  width: max-content;
+  z-index: 99;
+  font-family: unilever-shilling-regular;
+  font-size: $font-size-14;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-container button {
+  width: 16px;
+  height: 16px;
+  font-size: $font-size-14;
+  border-radius: 50%;
+  font-family: unilever-shilling-medium;
+  border: none;
+  margin-left: 5px;
+}

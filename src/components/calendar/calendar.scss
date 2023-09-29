@@ -1,0 +1,72 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $space-20 $space-20 $space-20 0;
+  flex: 0 0 30%;
+  background: $grey2;
+  padding-bottom: $space-10;
+  height: fit-content;
+
+  .calendar-header {
+    @include flex-center;
+    padding: $space-10;
+    border: 1px solid $base-green;
+    background: $grey1;
+    width: 100%;
+    justify-content: space-evenly;
+
+    h2 {
+      font-size: $base-font-size;
+      font-family: unilever-shilling-medium;
+      text-transform: uppercase;
+    }
+
+    button {
+      margin: 0 $space-10;
+      background-color: transparent;
+      color: $white-text;
+      border: none;
+      cursor: pointer;
+      @include flex-center;
+    }
+  }
+}
+
+.calendar-grid,
+.calendar-day-title {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.calendar-day,
+.calendar-day-title li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: not-allowed;
+}
+
+.calendar-day-title li {
+  text-transform: uppercase;
+  color: $base-green;
+  font-family: unilever-shilling-medium;
+}
+
+.has-event {
+  background-color: $bottle-green;
+}
+
+.calendar-day.faded {
+  color: $grey3;
+}
+
+.calendar-day.active {
+  background-color: $base-green;
+  color: $white-text;
+  border-radius: 0;
+}

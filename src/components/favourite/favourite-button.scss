@@ -1,0 +1,13 @@
+.fav-icon {
+  background: $grey1;
+  border: none;
+  cursor: pointer;
+}
+
+.message-container {
+  position: absolute;
+  top: calc(0% - 207px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

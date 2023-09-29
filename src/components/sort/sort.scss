@@ -1,0 +1,111 @@
+.btn-sort {
+  min-width: 100px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid $white-text;
+  cursor: pointer;
+
+  &.active {
+    border: 1px solid $base-green;
+  }
+
+  span {
+    color: $white-text;
+    font-family: unilever-shilling-regular;
+  }
+
+  img {
+    color: $white-text;
+  }
+
+  .up-arrow-sort {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      rgb(0, 163, 46) 0%,
+      rgb(0, 163, 46) 0%,
+      rgba(0, 163, 46, 0.7) 0%,
+      rgba(0, 163, 46, 0) 50%,
+      rgb(0, 163, 46) 250%,
+      rgba(0, 163, 46, 0.2623643207) 100%
+    );
+  }
+}
+
+.sort-radio-items {
+  position: absolute;
+  min-width: 138px;
+  background: var(--secondary-colors-gray-1, $grey1);
+  @include dropshadow;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: $font-size-16;
+  font-family: unilever-shilling-regular;
+  border: none;
+  padding: 10px;
+
+  li {
+    margin-bottom: $space-10;
+  }
+
+  label {
+    font-family: unilever-shilling-regular;
+    font-size: $base-font-size;
+    margin-left: 5px;
+    display: block;
+  }
+
+  input[type='checkbox'] {
+    position: relative;
+    border: 1px solid $white-text;
+    border-radius: 0;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 0.6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 18px;
+    width: 18px;
+    -webkit-appearance: none;
+    opacity: 0.5;
+  }
+
+  input[type='checkbox']:hover {
+    opacity: 1;
+  }
+
+  input[type='checkbox']:checked {
+    background-color: $base-green;
+    opacity: 1;
+    border: 1px solid $base-green;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  input[type='checkbox']:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid $base-black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+    display: none;
+  }
+}

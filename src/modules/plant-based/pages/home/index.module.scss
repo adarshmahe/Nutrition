@@ -1,0 +1,24 @@
+.homeWrap {
+  position: relative;
+}
+
+.boxWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  bottom: 0;
+  margin-left: 134px;
+
+  .mainContent {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 90%;
+    margin: 0 auto;
+    transition: top ease-in-out 0.3s;
+  }
+}

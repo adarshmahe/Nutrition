@@ -1,0 +1,34 @@
+.event-container {
+  font-family: unilever-shilling-regular;
+  text-align: left;
+
+  h3 {
+    color: $base-green;
+    font-size: $font-size-20;
+    padding-bottom: $space-10;
+    border-bottom: 1px solid $grey2;
+    text-align: center;
+    font-family: unilever-shilling-medium;
+  }
+
+  p {
+    color: $white-text;
+    font-size: $base-font-size;
+    font-weight: $font-weight-light;
+    margin: $space-20 0;
+  }
+
+  .event-date-time {
+    color: $base-green;
+    font-size: $base-font-size;
+    line-height: $line-height-1-9;
+    font-family: unilever-shilling-medium;
+
+    span {
+      color: $white-text;
+      padding-left: $space-10;
+      font-weight: $font-weight-light;
+      font-family: unilever-shilling-regular;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.modal-body {
+  width: 525px;
+  height: fit-content;
+  z-index: 999;
+  padding: $space-20;
+  background: $grey1;
+  @include position-absolute-center;
+  @include dropshadow;
+  position: fixed;
+}
+
+.modal-container {
+  position: relative;
+}
+.event-close {
+  position: absolute;
+  left: -10px;
+  top: -9px;
+}

@@ -1,0 +1,35 @@
+.filter-dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 45px;
+}
+
+.filter-icon-btn {
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid $white-text;
+  cursor: pointer;
+  span {
+    color: $white-text;
+    font-family: unilever-shilling-regular;
+  }
+  img {
+    margin-left: 29px;
+  }
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      rgb(0, 163, 46) 0%,
+      rgb(0, 163, 46) 0%,
+      rgba(0, 163, 46, 0.7) 0%,
+      rgba(0, 163, 46, 0) 50%,
+      rgb(0, 163, 46) 250%,
+      rgba(0, 163, 46, 0.2623643207) 100%
+    );
+  }
+}

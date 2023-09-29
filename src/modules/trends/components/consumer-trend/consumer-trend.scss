@@ -1,0 +1,288 @@
+.containerwrapper-video {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  font-family: unilever-shilling-regular;
+
+  &.no-scroll {
+    //overflow: hidden;
+  }
+
+  .cardwrapper {
+    display: block;
+    flex: 0 0 25%;
+    cursor: pointer;
+  }
+
+  .iframe-container {
+    left: 0;
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+
+  .iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 0;
+  }
+}
+
+.favorite-box {
+  display: flex;
+  width: 48px;
+  padding: 7px 12px;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--unilever-brand-colors-ul-white, $brand-secondary);
+}
+
+.underline-search {
+  width: 1064px;
+  height: 1px;
+  background: $grey3;
+}
+
+.consumer-favourite-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 477px;
+}
+
+.consumer-tags {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px 12px;
+  border: 1px solid $base-green;
+  margin-right: 0px;
+  display: inline-flex;
+  margin-bottom: $space-10;
+  margin-left: 5px;
+  margin-top: 17px;
+  align-items: center;
+  background-color: $grey2;
+
+  &.active {
+    background-color: $base-green;
+  }
+}
+
+// Video Player Container
+.video-detail-wrapper {
+  display: flex;
+  padding-bottom: $space-50;
+
+  .video-thumb {
+    width: 100%;
+  }
+}
+
+.vido-player-container {
+  display: flex;
+  flex: 0 0 70%;
+  height: 550px;
+  padding: $space-20;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--secondary-colors-gray-1, $grey1);
+}
+
+.back-to-video-list {
+  width: 20px;
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+}
+
+.video-title {
+  color: var(--primary-colors-white-text, $white-text);
+  font-family: unilever-shilling-medium;
+  font-size: $font-size-18;
+}
+
+.video-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.video-tags {
+  flex: 0 0 80%;
+}
+
+.video-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  width: 100%;
+  flex: 0 0 20%;
+
+  li {
+    margin-left: $space-10;
+  }
+}
+
+.sidebar-videos {
+  display: flex;
+  width: 388px;
+  height: 448px;
+  position: absolute;
+  top: 0px;
+  left: 700px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1px 128px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.similar-resources {
+  flex-shrink: 0;
+  color: var(--primary-colors-white-text, $white-text);
+  font-family: unilever-shilling-medium;
+  font-size: $font-size-18;
+  margin-bottom: $space-40;
+}
+
+.similar-videos-list {
+  display: flex;
+  flex: 0 0 100%;
+  height: 448px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.video-card-img {
+  display: flex;
+  width: 254px;
+  height: 248px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 12px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 33px;
+  left: 0px;
+}
+
+.search-analysis {
+  display: inline-flex;
+  height: 19px;
+  padding-left: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: $space-10;
+  flex-shrink: 0;
+  border-left: 1px solid $base-green;
+  background: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  opacity: 0.7;
+
+  &:hover {
+    color: $base-green;
+    opacity: 1;
+  }
+}
+
+.search-analysis-text {
+  color: var(--neutrals-accents-gray-4, $grey4);
+  font-family: unilever-shilling-regular;
+  font-size: $font-size-16;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+  line-height: 120%;
+}
+
+.tik-tok-resouce {
+  display: inline-flex;
+  padding-right: 8px;
+  padding-left: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: $space-10;
+  color: $white-text;
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    color: $base-green;
+    opacity: 1;
+  }
+}
+
+.trends-subnavigation .active {
+  .search-analysis,
+  .tik-tok-resouce {
+    opacity: 1;
+  }
+}
+
+.tik-tok-resource-text {
+  color: var(--primary-colors-white-text, $white-text);
+  font-family: unilever-shilling-medium;
+  font-size: $font-size-16;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: 120%;
+}
+
+.card-container .card-tags {
+  cursor: pointer;
+}
+
+.hashtag-box {
+  border: 1px solid $base-green;
+  padding: 4px 8px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  background-color: $grey2;
+}
+.main-iframe {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 0;
+}
+.main-iframe-container {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.similar-video-title {
+  cursor: pointer;
+}
+
+.similar-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 448px;
+
+  .cardwrapper {
+    flex: 0 0 92%;
+  }
+
+  .card-container {
+    margin: 0 0 $space-20;
+    .card .iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

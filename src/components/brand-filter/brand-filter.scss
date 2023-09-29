@@ -1,0 +1,138 @@
+.brand-filter {
+  min-width: 100px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  display: flex;
+  background-color: transparent;
+  border: 1px solid $white-text;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-right: 10px;
+
+  &.active {
+    border: 1px solid $base-green;
+    padding: 8px 12px;
+  }
+
+  span {
+    color: $white-text;
+    font-family: unilever-shilling-regular;
+    margin-right: 16px;
+  }
+
+  .up-arrow-filter {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      rgb(0, 163, 46) 0%,
+      rgb(0, 163, 46) 0%,
+      rgba(0, 163, 46, 0.7) 0%,
+      rgba(0, 163, 46, 0) 50%,
+      rgb(0, 163, 46) 250%,
+      rgba(0, 163, 46, 0.2623643207) 100%
+    );
+  }
+}
+
+.filter-modal {
+  position: absolute;
+  min-width: 100px;
+  background: var(--secondary-colors-gray-1, $grey1);
+  @include dropshadow;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: $font-size-16;
+  font-family: unilever-shilling-regular;
+  border: none;
+  padding: 10px;
+  .modal-content {
+    label {
+      font-family: unilever-shilling-regular;
+      font-size: $base-font-size;
+      margin-left: 5px;
+      display: block;
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 5px;
+    }
+
+    input[type='checkbox'] {
+      position: absolute;
+      left: 0px;
+      top: 3px;
+      border: 1px solid $white-text;
+      border-radius: 0;
+      background: none;
+      cursor: pointer;
+      line-height: 0;
+      margin: 0 0.6em 0 0;
+      outline: 0;
+      padding: 0 !important;
+      vertical-align: text-top;
+      height: 18px;
+      width: 18px;
+      -webkit-appearance: none;
+      opacity: 0.5;
+    }
+
+    input[type='checkbox']:hover {
+      opacity: 1;
+    }
+
+    input[type='checkbox']:checked {
+      background-color: $base-green;
+      opacity: 1;
+      border: 1px solid $base-green;
+      &::before {
+        display: block;
+      }
+    }
+
+    input[type='checkbox']:before {
+      content: '';
+      position: relative;
+      right: 50%;
+      top: 50%;
+      width: 4px;
+      height: 10px;
+      border: solid $base-black;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg) translate(123%, -132%);
+      z-index: 2;
+      display: none;
+    }
+    .search-input {
+      border: 1px solid $base-green;
+      position: relative;
+    }
+    .search {
+      margin: 12px 5px;
+    }
+    .input-search {
+      height: 35px;
+      background: none;
+      border: none;
+      color: $white-text;
+      width: 100%;
+      padding-right: 35px;
+      padding-left: 10px;
+    }
+    .search-icon {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+    }
+  }
+}
+
+.search-label-wrapper {
+  max-height: 300px;
+  overflow: auto;
+}

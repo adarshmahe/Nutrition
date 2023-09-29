@@ -1,0 +1,113 @@
+
+@import '../../../../styles/variables.scss';
+
+.myDialog {
+  :global {
+    .ant-modal-close {
+      top: 40px;
+      right: 50px;
+    }
+    .ant-modal-content {
+      box-shadow: unset;
+      background: transparent;
+    }
+  }
+}
+.closeBtn {
+  width: 24px;
+  height: 24px;
+  background: url('../../../../assets/images/concept-ai/close@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.dialogBox {
+  height: 680px;
+  background: rgba(0,0,0, .7);
+  .dialogMain {
+    height: 100%;
+    display: flex;
+    padding: 70px 34px;
+    .videoBox {
+      width: 828px;
+      height: 100%;
+      margin-right: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      video {
+        flex: 1;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .imageBox {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .textBox {
+      width: 320px;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      .topicBox {
+        .topicItem {
+          display: inline-block;
+          height: 24px;
+          color: #FFFFFF;
+          font-size: 12px;
+          border-radius: 4px;
+          background-color: $base-green;
+          padding: 2px 10px;
+        }
+
+      }
+      .titleBox {
+        font-size: 17px;
+        font-weight: 500;
+        color: #FFFFFF;
+        line-height: 22px;
+        margin-top: 20px;
+      }
+      .subjectBox {
+        font-size: 13px;
+        font-weight: 400;
+        color: #FFFFFF;
+        opacity: .6;
+        margin-top: 10px;
+      }
+      .countryBox {
+        font-size: 13px;
+        font-weight: 400;
+        color: #FFFFFF;
+        opacity: .6;
+        margin-top: 10px;
+      }
+      .infoBox {
+        font-size: 13px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 18px;
+        margin-top: 10px;
+      }
+      .labelBox {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        .labelItem {
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: 400;
+          color: $base-green;
+          padding: 4px 10px;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          border: 1px solid $base-green;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

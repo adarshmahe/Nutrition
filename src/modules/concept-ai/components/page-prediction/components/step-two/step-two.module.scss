@@ -1,0 +1,66 @@
+.addressCom {
+  height: 100%;
+  padding: 40px 97px 30px;
+  position: relative;
+  .title {
+    font-size: 25px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 34px;
+  }
+  .addressInfo {
+    font-size: 13px;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 30px;
+    right: 97px;
+  }
+}
+.selectorOptionsContainer {
+  .optionItem {
+    height: 56px;
+    margin-bottom: 32px;
+    background: rgba(0, 139, 16, .2);
+    font-size: 21px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 56px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      background: rgba(0, 139, 16, .4);
+    }
+    &.selected {
+      background: linear-gradient(90deg, rgba(0, 137, 15, .8), rgba(5, 31, 7, .8));
+      .selectedIcon {
+        display: block;
+      }
+    }
+    &.overview {
+      background: rgba(0, 139, 16, .2);
+      &.selected {
+        background: linear-gradient(90deg, rgba(0, 137, 15, .8), rgba(5, 31, 7, .8));
+        .selectedIcon {
+          display: block;
+        }
+      }
+    }
+    .selectedIcon {
+      width: 24px;
+      height: 24px;
+      background: url('../../../../../../assets/images/concept-ai/selected@2x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.share-modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 378px;
+  height: 85px;
+  padding: 10px;
+  font-family: unilever-shilling-regular;
+  margin-left: 37px;
+}
+
+.share-modal-container h4 {
+  color: $white-text;
+  font-size: $base-font-size;
+  font-weight: $font-weight-normal;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.outLookIcon {
+  width: 58px;
+  height: 68px;
+  padding: 9px 9px 9.301px 6px;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.teams-share-button {
+  display: flex;
+  padding: 9px 9px 9.301px 6px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.file-copy-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.file-copy-label,
+.file-copy-inputfield {
+  color: $white-text;
+  font-size: $font-size-16;
+  font-weight: $font-weight-normal;
+}
+
+.file-copy-inputfield {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 10px 16px 9px 9px;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 2px solid $grey3;
+  background: $grey1;
+  position: relative;
+  margin-top: 5px;
+  padding-right: 40px;
+}
+
+.fileCopyIcon {
+  width: 30px;
+  height: 24px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 31px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.teams-share-button img {
+  width: 42px;
+  height: 42px;
+}
+
+.modal-body:has(.share-modal-container) {
+  width: 510px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 163, 46, 12);
+}
+.modal-body:has(.share-modal-container) .share-modal-container {
+  height: auto;
+}
+
+.success-msg {
+  font-family: unilever-shilling-regular;
+  font-size: $font-size-14;
+}

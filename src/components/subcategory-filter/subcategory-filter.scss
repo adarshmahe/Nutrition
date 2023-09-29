@@ -1,0 +1,36 @@
+.subcategory-filter {
+  min-width: 100px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  display: flex;
+  background-color: transparent;
+  border: 1px solid $white-text;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-right: 10px;
+  &.active {
+    border: 1px solid $base-green;
+  }
+
+  span {
+    color: $white-text;
+    font-family: unilever-shilling-regular;
+    margin-right: 16px;
+  }
+
+  .up-arrow-filter {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      rgb(0, 163, 46) 0%,
+      rgb(0, 163, 46) 0%,
+      rgba(0, 163, 46, 0.7) 0%,
+      rgba(0, 163, 46, 0) 50%,
+      rgb(0, 163, 46) 250%,
+      rgba(0, 163, 46, 0.2623643207) 100%
+    );
+  }
+}

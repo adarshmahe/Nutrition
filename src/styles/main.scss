@@ -1,0 +1,79 @@
+// Base
+@import './variables';
+@import './mixins';
+@import './typography';
+@import './animations';
+@import './gutterspaces';
+@import './global';
+
+// Components
+@import '../components/profile/profile.scss';
+@import '../components/left-navigation/left-navigation.scss';
+@import '../components/landing-bg-video/landing-bg-video.scss';
+@import '../components/logo/logo.scss';
+@import '../components/tooltip/tooltip.scss';
+@import '../components/favourite/favourite-button.scss';
+@import '../components/calendar/calendar.scss';
+@import '../components/popup-modal/popup-modal.scss';
+@import '../components/search/search.scss';
+@import '../components/favourite-icon/favourite-icon.scss';
+@import '../components/filter/filter.scss';
+@import '../components/sort/sort.scss';
+@import '../components/filter/components/filter-modal.scss';
+@import '../components/message-modal/message-modal.scss';
+@import '../components/share-modal/share-modal.scss';
+@import '../components/confirmation-modal/confirmation-modal.scss';
+@import '../components//brand-filter/brand-filter.scss';
+@import '../components/date-filter/date-filter.scss';
+@import '../components/market-filter/market-filter.scss';
+@import '../components/subcategory-filter/subcategory-filter.scss';
+
+// Module GOTFL - components
+@import '../modules/gotfl/components/horizontal-nav/horizontal-nav.scss';
+@import '../modules/gotfl/components/events-list/events-list.scss';
+@import '../modules/gotfl/components/todays-event/todays-event.scss';
+@import '../modules/gotfl/components/search-navbar/search-navbar.scss';
+
+// Module GOTFL - pages
+@import '../modules/gotfl/pages/learnings/learnings.scss';
+@import '../modules/gotfl/pages/events-folio/events-folio.scss';
+
+// Module All Learning - pages
+@import '../modules/gotfl/components/learning-card/learning-card.scss';
+@import '../modules/gotfl/components/learning-card/learningcard-modal/mylearning-popup.scss';
+@import '../components/slider/slider-component.scss';
+
+// Modules - home
+@import '../modules/home/home.scss';
+@import '../modules/home/landingpage/landing.scss';
+@import '../modules/home/navbar/navbar.scss';
+@import '../modules/home/navbar/modal/modal.scss';
+
+//Module - Share My Learning - page
+@import '../modules/gotfl/components/share-my-learning/share-my-learning.scss';
+
+// Modules - concept-ai
+@import '../modules/concept-ai/concept-ai.scss';
+
+//Module - trends pages
+@import '../modules/trends/components/trends-horizantal-nav/trends-horizantal-nav.scss';
+@import '../modules/trends/components/trends-dial/trends-dial.scss';
+@import '../modules/trends/components/search-analysis/top-dishes.scss';
+@import '../modules/trends/components/search-analysis/top-dish-table/drill-down.scss';
+@import '../modules/trends/components/competitor-innovation/consumer-trends/consumer-trends.scss';
+@import '../modules/trends/components/competitor-innovation/consumer-trends/consumer-filter/consumer-filter.scss';
+@import '../modules/trends/components/emerging-food/emerging-food.scss';
+//loader css
+@import '../components/loader/loader.scss';
+// Module Commercializing Sustainability - components
+@import '../modules/knowledge-hub/sustainability/components/sustainability-nav/sustainability-nav.scss';
+@import '../modules/knowledge-hub/sustainability/components/five-principles/five-principles.scss';
+@import '../modules/knowledge-hub/sustainability/components/five-principles/explore-learning.scss';
+
+// Module - Market Trend
+@import '../modules/trends/components/market-trend/market-trend.scss';
+@import '../modules/trends/components/consumer-trend/consumer-trend.scss';
+@import '../modules/trends/components/population-segregation/population-segregation.scss';
+
+//logout
+@import '../components/profile/logout-page/logout-page.scss';

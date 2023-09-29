@@ -1,0 +1,68 @@
+.menuWrap {
+  width: 200px;
+  position: relative;
+  padding-right: 24px;
+
+  .menuList {
+    .menuItemWrap {
+      margin-bottom: 40px;
+      .menuItem {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+  
+        .label {
+          margin-left: 12px;
+          color: #C8C9C9;
+          font-size: 15px;
+          white-space: nowrap;
+          white-space: pre-line;
+          text-align: right;
+          font-weight: bold;
+
+          &:hover {
+            color: #00A32E;
+          }
+
+          &.active {
+            color: #00A32E;
+          }
+        }
+      }
+
+      .menuSumWrap {
+        margin-top: 20px;
+        .subLabel {
+          text-align: right; 
+          padding: 9px 0;
+          cursor: pointer;
+
+          color: #C8C9C9;
+          font-size: 12px;
+          white-space: pre-line;
+
+          &:hover {
+            color: #00A32E;
+            text-decoration: underline;
+          }
+          &.active {
+            color: #00A32E;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .line {
+    display: block;
+    width: 1px;
+    height: 420px;
+    background: linear-gradient(#000, #00A32E, #000);
+
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

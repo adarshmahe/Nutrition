@@ -1,0 +1,39 @@
+.containerwrapper-innovation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  font-family: unilever-shilling-regular;
+  border-top: 1px solid $grey3;
+  margin-top: 16px;
+
+  .cardwrapper {
+    display: block;
+    flex: 0 0 25%;
+    margin-top: 16px;
+
+    .card-descp {
+      font-family: Unilever Shilling;
+      font-size: $base-font-size;
+      font-weight: $font-weight-normal;
+    }
+
+    .consumer {
+      padding-bottom: 5px;
+      font-size: $font-size-16;
+      color: $brand-secondary;
+      font-family: unilever-shilling-medium;
+      line-height: $line-height-1-5;
+      font-weight: $font-weight-bold;
+    }
+
+    .consumer-title {
+      font-size: $font-size-16;
+      color: $base-green;
+      font-family: unilever-shilling-medium;
+      line-height: $line-height-1-5;
+      font-weight: $font-weight-bold;
+    }
+  }
+}

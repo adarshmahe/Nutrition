@@ -1,0 +1,158 @@
+.selectBallCom {
+  height: calc(100% - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 0;
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+
+    25% {
+      transform: translateY(-10px);
+    }
+
+    50% {
+      transform: translateY(0px);
+    }
+
+    75% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .ballItemBox {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &.delay {
+      animation-delay: 4s;
+    }
+
+    &:first-child {
+      margin-right: 300px;
+    }
+  }
+
+  .ballItem {
+    width: 280px;
+    height: 280px;
+    transition: all .3s;
+    cursor: pointer;
+    position: relative;
+
+    @keyframes rotateInfinite {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url('../../../../assets/images/concept-ai/ball@3x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: .5;
+      position: absolute;
+      animation: rotateInfinite 10s linear infinite;
+    }
+
+    &:hover {
+      width: 300px;
+      height: 300px;
+
+      &::before {
+        opacity: .7;
+      }
+
+      .ballName {
+        font-size: 24px;
+        color: #00FF00;
+        line-height: 31px;
+      }
+    }
+
+    &.active {
+      width: 450px;
+      height: 450px;
+
+      &::before {
+        opacity: .9;
+      }
+
+      .ballName {
+        font-size: 33px;
+        font-weight: 800;
+        color: #00FF00;
+        line-height: 53px;
+      }
+    }
+
+    .ballContent {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ballName {
+      font-size: 21px;
+      color: #479746;
+      line-height: 27px;
+      text-align: center;
+      font-weight: 600;
+      transition: all .3s;
+    }
+
+    .areaItem {
+      font-size: 27px;
+      font-weight: 800;
+      color: #F6F7F7;
+      line-height: 24px;
+      opacity: 0.2;
+      text-align: center;
+      margin-bottom: 35px;
+      user-select: none;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+      &.disabled {
+        opacity: 0.2 !important;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

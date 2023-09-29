@@ -1,0 +1,207 @@
+.principle-container img {
+  width: 125px;
+  height: 125px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.principle h2 {
+  color: $brand-secondary;
+  font-family: unilever-shilling-regular;
+  font-size: $font-size-24;
+  padding-bottom: $space-10;
+}
+
+.principle p {
+  color: $brand-secondary;
+  font-family: unilever-shilling-regular;
+  font-size: $font-size-16;
+  justify-content: center;
+  margin-right: $space-20;
+}
+
+.principle-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 200ms ease, opacity 200ms ease;
+}
+
+.toggle-view {
+  background: none;
+  border: none;
+  margin-right: 20px;
+
+  img {
+    width: 20px;
+    height: auto;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.principle-details-img img {
+  width: 262px;
+  height: 262px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.principle-btn {
+  height: 40px;
+  padding: 10px;
+  background: var(--primary-colors-forest-green, #008651);
+  text-transform: uppercase;
+  overflow: hidden;
+  color: var(--unilever-brand-colors-ul-white, $white-text);
+  border: none;
+  cursor: pointer;
+
+  @include respond-to(lg) {
+    margin:0 0 5px 0;
+  }
+
+  &:hover {
+    background: $dark-green;
+  }
+}
+
+.principle-data {
+  position: relative;
+
+  h3 {
+    font-size: $font-size-24;
+    margin-bottom: $space-10;
+    font-family: unilever-shilling-medium;
+  }
+}
+
+.principle-img {
+  flex: 0 0 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &.active {
+    img {
+      width: 260px;
+      height: 260px;
+    }
+  }
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, $forest-green, $black);
+    opacity: 0.9;
+    z-index: 0;
+  }
+}
+
+.principle {
+  display: flex;
+  flex-wrap: wrap;
+
+  .principle-list {
+    flex: 0 0 30.33%;
+    cursor: pointer;
+    width: calc(33% - 2rem);
+    min-width: calc(33% - 2rem);
+    height: 400px;
+    min-height: 400px;
+    perspective: 1000px;
+    margin: 1rem;
+    position: relative;
+
+    @include respond-to(lg) {
+      flex:0;
+      height:465px;
+    }
+  }
+  
+}
+
+.principle-container.front, .principle-container.back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+}
+
+.principle-container.front {
+  background-size: cover;
+  font-weight: 600;
+  color: $white-text;
+  overflow: hidden;
+  padding: $space-20;
+
+  .circle-container  {
+    background: $base-green;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin:0 auto 5px;
+    padding-top: 3px;
+  }
+}
+
+.principle-container.back {
+  background: $base-green;
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+
+  @include respond-to(lg) {
+    line-height: $line-height-1-4;
+  }
+}
+
+.principle-list:hover .principle-container.front {
+  transform: rotateY(180deg);
+}
+
+.principle-list:hover .principle-container.back {
+  transform: rotateY(0deg);
+}
+
+.principle-container.back .principle-data, .principle-container.back .priciple-details {
+  display: block;
+  position: initial;
+}
+
+.principle-container.back .principle-data h2 {
+  font-size: $base-font-size;
+}
+
+.principle-container.back .principle-data p {
+  font-size: $font-size-12;
+  @include respond-to(lg) {
+    margin-right:0px;
+  }
+}

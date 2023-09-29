@@ -1,0 +1,13 @@
+.sign-in-message-container {
+  @include flex-center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $brand-secondary;
+}
+
+.sign-in-message {
+  font-size: $font-size-32;
+  text-align: center;
+  padding: 20px;
+  color: $base-black;
+}

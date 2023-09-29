@@ -1,0 +1,377 @@
+.toolGroupBox {
+  display: flex;
+  align-items: center;
+
+  .inputBorder {
+    display: inline-block;
+    padding: 4px;
+    background-image: url('../../../../assets//images/concept-ai/input-border@2x.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 26px;
+
+    :global {
+      .ant-select {
+        width: 122px;
+        height: 28px;
+        overflow: hidden;
+        position: relative;
+        top: 2px;
+
+        .ant-select-selector {
+          height: 28px;
+          line-height: 28px;
+          background-color: transparent;
+          border: 0;
+          box-shadow: unset !important;
+          padding-top: 0;
+
+          .ant-select-selection-overflow {
+            height: 28px;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+          }
+
+          .ant-select-selection-search-input,
+          .ant-select-selection-placeholder,
+          .ant-select-selection-item {
+            color: #FFF;
+            line-height: 28px;
+          }
+          .ant-select-selection-item {
+            color: #909399;
+            background: rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            margin-right: 2px;
+          }
+          .ant-select-selection-overflow-item-suffix {
+            width: 38px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            .ant-select-selection-search-input {
+              height: 100%;
+            }
+          }
+        }
+        &.ant-select-single {
+          .ant-select-selection-item {
+            margin-right: 12px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding: 0 8px;
+            border-radius: 4px;
+          }
+        }
+
+        .ant-select-arrow {
+          color: #FFF;
+        }
+
+        .ant-select-clear {
+          background: transparent;
+          color: #FFF;
+        }
+      }
+    }
+  }
+
+  .mySearch {
+
+    :global {
+
+      .ant-input,
+      .ant-btn {
+        color: #FFF !important;
+        background-color: transparent;
+        border: 2px solid rgba(0, 137, 15, 1);
+      }
+
+      .ant-input {
+        height: 36px;
+        border-right: 0;
+        box-shadow: unset !important;
+
+        &::placeholder {
+          color: #FFF;
+        }
+      }
+
+      .ant-btn {
+        height: 36px;
+        border-left: 0px;
+        color: #00FF00 !important;
+
+        .ant-btn-icon {
+          margin-top: 4px;
+
+          .anticon-search {
+            font-size: 22px;
+          }
+        }
+
+        &:hover {
+          border-color: rgba(0, 137, 15, 1);
+        }
+      }
+    }
+  }
+
+  .myAddBtn {
+    width: 123px;
+    height: 32px;
+    border: 1px solid #74EF4D;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #FFF;
+    background: #16930A;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 20px;
+    &:hover {
+      opacity: .8;
+    }
+    &:active {
+      opacity: .6;
+    }
+  }
+}
+
+.myConceptPage {
+  width: 1400px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  position: relative;
+  transition: all .3s linear;
+
+  .myConceptPageContainer {
+    padding: 40px 58px;
+
+    :global {
+      .ant-spin-container {
+        &::after {
+          background: #000;
+        }
+      }
+      .ant-table {
+        color: #FFFFFF;
+        background-color: transparent;
+
+        .ant-table-thead {
+          background-image: linear-gradient(90deg, rgba(0, 137, 15, .8), rgba(5, 31, 7, .8));
+
+          .ant-table-cell {
+            padding-top: 28px;
+            padding-bottom: 36px;
+            border-radius: 0 !important;
+            font-size: 17px;
+            line-height: 17px;
+            color: #FFFFFF;
+            font-weight: 400;
+            background-color: transparent;
+            user-select: none;
+            border: 0;
+
+            &::before {
+              display: none;
+            }
+          }
+
+          .ant-table-column-sorter-inner {
+            color: #FFFFFF;
+          }
+
+          .ant-table-column-sorter-up,
+          .ant-table-column-sorter-down {
+            &.active {
+              color: rgba(0, 137, 15, 1);
+            }
+          }
+        }
+
+        .ant-table-tbody {
+          .ant-table-row {
+            width: 100%;
+            position: relative;
+
+            &:hover {
+              td {
+                background: rgba(255, 255, 255, .1) !important;
+              }
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 1px;
+              background: linear-gradient(90deg, rgba(0, 137, 15, 0.2), rgba(0, 137, 15, 0.8), rgba(0, 137, 15, 0.2));
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+
+            .ant-table-cell {
+              border: 0;
+
+              &.ant-table-column-sort {
+                background: rgba(255, 255, 255, .2);
+              }
+
+              &.ant-table-cell-row-hover {
+                background: rgba(255, 255, 255, .1) !important;
+              }
+
+              .ant-tag {
+                user-select: none;
+                cursor: pointer;
+                display: flex;
+                // align-items: center;
+                justify-content: center;
+
+                &:hover {
+                  opacity: .8;
+                }
+
+                &:active {
+                  opacity: .7;
+                }
+              }
+            }
+          }
+          .ant-table-placeholder {
+            background: rgba(0, 0, 0, .2);
+            .ant-table-cell {
+              border: 0;
+            }
+            .ant-empty {
+              padding: 200px 0;
+              .ant-empty-description {
+                color: #FFF;
+              }
+            }
+            &:hover {
+              .ant-table-cell {
+                background: rgba(0, 0, 0, .2);
+              }
+            }
+          }
+
+          :local(.statusTag) {
+            width: 116px;
+            height: 24px;
+            text-align: center;
+          }
+        }
+      }
+
+      .ant-pagination {
+        margin-top: 23px;
+        margin-bottom: 0;
+
+        .ant-pagination-prev,
+        .ant-pagination-next {
+          .ant-pagination-item-link {
+            color: #FFF;
+          }
+        }
+
+        .ant-pagination-item {
+          background-color: #3C903F;
+          border: 0;
+
+          a {
+            color: #FFF;
+          }
+
+          &.ant-pagination-item-active {
+            background-color: #00FF00;
+          }
+        }
+
+        .ant-pagination-options {
+          color: #FFF;
+
+          .ant-select-selector {
+            background: transparent;
+            border-color: #00FF00 !important;
+
+            .ant-select-selection-item {
+              color: #FFF;
+            }
+          }
+
+          .ant-select-arrow {
+            color: #FFF;
+          }
+
+          .ant-pagination-options-quick-jumper {
+            input {
+              color: #FFF;
+              border-color: #00FF00;
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .myHandleBtn {
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:active {
+        opacity: .7;
+      }
+
+      &.more {
+        background-image: url('../../../../assets/images/concept-ai/more@2x.png');
+      }
+
+      &.refresh {
+        background-image: url('../../../../assets/images/concept-ai/refresh@2x.png');
+      }
+
+      &.collect {
+        background-image: url('../../../../assets/images/concept-ai/collect@2x.png');
+      }
+
+      &.collected {
+        background-image: url('../../../../assets/images/concept-ai/collected@2x.png');
+      }
+
+      &.delete {
+        background-image: url('../../../../assets/images/concept-ai/delete@2x.png');
+      }
+
+      &.edit {
+        background-image: url('../../../../assets/images/concept-ai/edit@2x.png');
+      }
+    }
+  }
+}
+.submittingText {
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 18px;
+  background: rgba(38, 37, 36, 1);
+}
